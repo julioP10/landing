@@ -1,0 +1,41 @@
+<div class="container-25 w-container">
+    <section class="section-pricing18">
+        <div class="page-padding-6">
+            <div class="container-large-2">
+                <div class="padding-vertical padding-xhuge">
+                    <div class="margin-bottom margin-xxlarge">
+                        <div class="text-align-center">
+                            <div class="max-width-large-2 align-center">
+                                <div class="margin-bottom margin-small">
+                                    <h2 data-w-id="6a9184e7-63a7-53df-b63a-bff317f0fbbd" class="heading-19 align-center"
+                                        style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(0.845538, 0.845538, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                                        {{config.titulo}}</h2>
+                                        <p *ngIf="config.detalle" class="text-size-medium text_center">{{config.detalle}}<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-layout-grid pricing18_components">
+                        <div *ngFor="let item of config.items" class="pricing18_plan"
+                            style="will-change: transform, opacity; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; ">
+                            <div class="pricing18_content">
+                                <div class="pricing18_content-top">
+                                    <div class="margin-bottom margin-medium">
+                                        <div class="text-align-center">
+                                            <div class="iconos_google icono_color_tama-o_categorias_morado">
+                                                {{item.icono}}</div>
+                                            <div class="text_descripcion_producto">{{item.titulo}}</div>
+                                            <div class="text_descripcion_producto ajustes_texto_descripcion_producto">
+                                                {{item.detalle}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

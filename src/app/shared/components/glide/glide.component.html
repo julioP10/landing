@@ -1,0 +1,36 @@
+<div #glideRef class="glide basic " [ngStyle]="{'background-color':background}" style="height: 100%;"
+    [class.inactive-bullet]="!bullets">
+    <div class="glide__track pb-3" data-glide-el="track">
+        <div class="glide__slides" (click)="onclick($event)" [ngClass]="{'space':enableCssSpace}" #glideSlides>
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <div class="glide__arrows slider-nav" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left left-arrow btn btn-link" data-glide-dir="<"
+            [disabled]="arrowLeft">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M9.02366 10.0006L13.1487 14.1256L11.9703 15.3039L6.66699 10.0006L11.9703 4.69727L13.1487 5.8756L9.02366 10.0006Z"
+                    [attr.fill]="steps?(current==1)?'#e9ecf2':'#FF3C3C':'#FF3C3C'" />
+            </svg>
+        </button>
+        <div class="glide__arrow glide__arrow--center btn btn-link" *ngIf="steps">
+            <a class="step left">{{current}}</a>
+            <div class="line"></div>
+            <a class="step right">{{totalSlide}}</a>
+        </div>
+
+        <div style="position: absolute;" class="glide__bullets slider-dot-container" data-glide-el="controls[nav]">
+            <button *ngFor="let item of glideCount; let i = index;" class="glide__bullet slider-dot"
+                (click)="onBulletClick(i)"></button>
+        </div>
+        <button class="glide__arrow glide__arrow--right right-arrow btn btn-link" data-glide-dir=">"
+            [disabled]="arrowRight">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.9766 10.0006L6.85156 5.8756L8.0299 4.69727L13.3332 10.0006L8.0299 15.3039L6.85156 14.1256L10.9766 10.0006Z"
+                    [attr.fill]="steps?(current==totalSlide)?'#e9ecf2':'#FF3C3C':'#FF3C3C'" />
+            </svg>
+        </button>
+    </div>
+</div>

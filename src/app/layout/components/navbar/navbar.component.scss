@@ -1,0 +1,28 @@
+.overflow-custom {
+  background-color: transparent;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.open-menu-mobile {
+  display: none;
+  @media screen and (max-width: 576px) {
+    height: 5521.31px;
+    display: block;
+  }
+}
+
+.close-menu-mobile {
+  @media screen and (max-width: 576px) {
+    height: 0;
+    display: none;
+  }
+}

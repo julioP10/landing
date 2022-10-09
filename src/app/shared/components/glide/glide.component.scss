@@ -1,0 +1,89 @@
+.glide__arrow {
+    background: #FFEDF2 !important;
+    box-shadow: 0px 2px 6px rgb(176 176 176 / 45%), 0px 0px 8px rgb(130 130 130 / 10%) !important;
+    border-radius: 14px !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0px 0px !important;
+}
+
+.glide__arrow--left {
+    left: -3em !important;
+
+    @media screen and (max-width: 576px) {
+        left: 1em !important;
+        display: none !important;
+    }
+}
+
+.glide__arrow--right {
+    right: -3em !important;
+
+    @media screen and (max-width: 576px) {
+        left: 3em !important;
+        display: none !important;
+
+    }
+}
+
+.glide__bullet {
+    background: #B3B8BF !important;
+    border-radius: 6px !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.glide__bullet--active {
+    background-color: white !important;
+    background: #000000 !important;
+    width: 24px !important;
+    height: 10px !important;
+    border-radius: 5px !important;
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+    border: none !important;
+    background-color: #000000 !important;
+}
+
+.glide__bullets {
+    bottom: -16px !important;
+    // bottom: 20px !important;
+}
+.content-banner .glide__arrows .glide__bullets {
+    display: none;
+}
+.dsc-card-bottom-points .glide__arrows .glide__bullets {
+    display: none;
+}
+.dsc-card-bottom-points .glide__arrows .glide__arrow--left, .dsc-card-bottom-points .glide__arrows .glide__arrow--right {
+    display: block !important;
+}
+.slides_cupo_stock .glide__arrows .glide__arrow--left, .slides_cupo_stock .glide__arrows .glide__arrow--right {
+    display: none !important;
+}
+@media screen and (max-width: 576px) {
+    body .dsc-card-bottom-points .glide__arrows .glide__arrow--left, body .dsc-card-bottom-points .glide__arrows .glide__arrow--right {
+        display: none !important;
+    }
+    .dsc-card-bottom-points .glide__arrows .glide__bullets {
+        display: -webkit-inline-box;
+    }
+    .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet {
+        display: none !important;
+    }
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(1),
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(2), 
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(3), 
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(4), 
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(5), 
+    body .dsc-card-bottom-points .glide__arrows .glide__bullets button.glide__bullet:nth-child(6) {
+        display: block !important;
+    }
+}
+.inactive-bullet {
+    .glide__bullets {
+      display: none;
+    }
+  }

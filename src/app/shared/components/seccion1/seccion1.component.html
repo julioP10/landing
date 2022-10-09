@@ -1,0 +1,26 @@
+<header class="section-header-home padding_commander">
+    <div class="page-padding">
+        <div class="container-large">
+            <div class="padding-vertical padding-xhuge">
+                <div class="w-layout-grid header4_component">
+                    <div class="header4_content">
+                        <div class="margin-bottom margin-small">
+                            <div class="div-block-28 tagline_izquierda">
+                                <div class="text-weight-semibold">{{config.pagina}}</div>
+                            </div>
+                            <h1 class="heading-16">
+                                <strong class="text-block-33">{{config.titulo}}</strong>
+                            </h1>
+                            <p class="text-size-medium">{{config.detalle}} <br></p>
+                            <a [href]="config.botonComienza" *ngIf="config.botonComienza"
+                                class="button-secondary btn_seg boton_mobile_center w-button">¡Comienza ahora!</a>
+                        </div>
+                    </div><img [src]="config.imagen" loading="lazy"
+                        sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 43vw" alt=""
+                        class="header4_lightbox-image"
+                        style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(0.893626, 0.893626, 0.67729) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

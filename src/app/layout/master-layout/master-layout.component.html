@@ -1,0 +1,41 @@
+ 
+<app-navbar></app-navbar>
+<div class="section-header-home padding_commander espaciado_seccion_mobile padding_seccion_25"> 
+    <router-outlet></router-outlet>
+    <section class="banner_app_pardo" *ngIf="!cerrar">
+        <div class="page-padding-6">
+            <div class="container-large-2">
+                <div class="banner4_component" style="display: flex;">
+                    <div class="banner4_content">
+                        <div class="banner4_icon-wrapper"><img
+                            src="../../../../assets/img/logo-blanco.svg"
+                                loading="lazy" alt="" class="icon-1x1-small"></div>
+                        <div class="banner4_text-wrapper">
+                            <div class="text-weight-semibold-11"><span class="bold">Descarga la App de Pardo</span>
+                            </div>
+                            <p class="text-size-small-3">Y pide sin culpa.</p>
+                        </div>
+                    </div>
+                    <div class="w-layout-grid banner4_social-icons">
+                        <div id="w-node-_593d563a-6f45-e934-4c94-e63958913587-58913579" class="div-block-29"><a
+                                id="w-node-_593d563a-6f45-e934-4c94-e63958913588-58913579"
+                                href="https://apps.apple.com/cl/app/orion-eat/id1460064457" target="_blank"
+                                class="banner4_social-link ajuste_img_app_mobile w-inline-block"><img
+                                    src="https://uploads-ssl.webflow.com/629671c629e6b6281674cb8b/62b3bc76d65e1075e3295efa_app_01.svg"
+                                    loading="lazy" width="164" alt="" class="image-98"></a><a
+                                id="w-node-_593d563a-6f45-e934-4c94-e6395891358a-58913579"
+                                href="https://play.google.com/store/apps/details?id=com.orioneat.app&amp;hl=es_419"
+                                class="banner4_social-link ajuste_img_app_mobile w-inline-block"><img
+                                    src="https://uploads-ssl.webflow.com/629671c629e6b6281674cb8b/62b3bc7647a2fa1493d908b6_app_02.svg"
+                                    loading="lazy" width="165" alt=""
+                                    class="image-97 ajueste_app_driver_banner_mobile"></a></div>
+                    </div><a data-w-id="593d563a-6f45-e934-4c94-e6395891358c" href="#"
+                        class="banner4_close-button w-inline-block">
+                        <div class="iconos_google icono_color_tama-o_categorias_morado icono_negro" (click)="cerrar=!cerrar;$event.preventDefault()">cancel</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<app-footer></app-footer>

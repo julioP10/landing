@@ -1,0 +1,78 @@
+
+<ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'GRANDE'">
+        <div class="container_testimonios margin_5 w-container reveal"> 
+            <section class="section-testimonios margin_5">
+                <div class="page-padding-4">
+                    <div class="container-large">
+                        <div class="padding-vertical padding-xhuge">
+                            <div class="margin-bottom margin-xxlarge">
+                                <div class="max-width-large">
+                                    <div class="margin-bottom margin-small">
+                                        <div class="div-block-28">
+                                            <div class="text-weight-semibold text_amarillo">Testimonios</div>
+                                        </div>
+                                        <h2 class="heading-19">{{config?.titulo}}</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="testimonial11_component w-slider"  aria-label="carousel">
+                            
+                                <app-glide [bullets]="true" [settings]="settings">
+                                    <div class="testimonial11_mask w-slider-mask" *ngFor="let item of config.testimonmios">
+                                        <div class="testimonial11_slide w-slide" aria-label="1 of 2" role="group"
+                                            style="transform: translateX(0px); opacity: 1;">
+                                            <div class="testimonial11_content">
+                                                <div class="margin-vertical margin-medium">
+                                                    <div class="heading-xsmall-3">{{item.parrafo}}
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial11_client">
+                                                    <div class="testimonial11_client-image-wrapper"><img
+                                                        [src]="item.foto"
+                                                            loading="lazy"
+                                                           
+                                                            sizes="56px" alt="" class="testimonial11_client-image"></div>
+                                                    <div class="testimonial11_client-info">
+                                                        <p class="text-weight-semibold-8">
+                                                            <strong class="bold-text-22">{{item.nombre}}</strong>
+                                                        </p>
+                                                        <p><strong class="bold-text-23">{{item.especializacion}}</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial11_divider-2"></div>
+                                                    <div class="testimonial11_logo-wrapper"><img [src]="item.foto"
+                                                            loading="lazy" alt="" class="testimonial11_logo"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </app-glide>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'PEQUEÑO'">
+        <app-glide [bullets]="true" [settings]="settingsPequeno">
+        <div class="testimonial7_mask w-slider-mask" id="w-slider-mask-0"> 
+            <div class="testimonial7_slide margin_testimonio_mobile w-slide" 
+                style="transform: translateX(0px); opacity: 1;">
+                <div class="testimonial7_content margin_testimonio_mobile">
+                    <div class="margin-vertical margin-medium">
+                        <div class="heading-small margin_testimonio_mobile">"He
+                            logrado manejar mis propios tiempos y me conecto cuando
+                            tengo disponibilidad, además, la plataforma es súper
+                            didáctica y fácil de manejar"<br>‍</div>
+                    </div>
+                    <p class="text-weight-semibold-10">Erwin Hernández</p>
+                    <p>Driver de Ecuador</p>
+                </div>
+            </div>  
+        </div>
+        </app-glide>
+    </ng-container>
+    <ng-container *ngSwitchDefault></ng-container>
+</ng-container>

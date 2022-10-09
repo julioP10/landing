@@ -1,0 +1,35 @@
+
+<section class="section-faq1 seccion_preguntas_frecuentes reveal">
+    <div class="page-padding-3">
+        <div class="container-small">
+            <div class="padding-vertical padding-xhuge">
+                <div class="margin-bottom margin-xxlarge">
+                    <div class="text-align-center">
+                        <div class="max-width-large">
+                            <div class="margin-bottom margin-small">
+                                <h2 class="heading-19 align-center">{{config.titulo}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq1_component">
+                    <ng-container  *ngFor="let item of config.dudas">
+                    <div class="faq1_accordion">
+                        <div class="faq1_question">
+                            <div class="text-size-medium-4 text-weight-bold">{{item.titulo}}
+                            </div><img (click)="item.abrir=!item.abrir"
+                                src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031625d694aee83_icon_chevron.svg"
+                                loading="lazy" alt="" class="faq1_icon">
+                        </div>
+                        <div style="width: 100%;" class="faq1_answer" [@toggleBox]="item.abrir ? 'open' : 'closed'">
+                            <div class="margin-bottom margin-small margin_faq">
+                                <p *ngFor="let sub of item.parrafos" class="preguntas_frecuentes">{{sub}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
